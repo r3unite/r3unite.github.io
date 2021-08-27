@@ -484,6 +484,7 @@ function arrayEqual(arr)
 }
 function catchWord(multi)
 {
+	getText();
 	wordHides.length = 0;
 	if (multi && DOM.inputBox.value !== '')
 	{
