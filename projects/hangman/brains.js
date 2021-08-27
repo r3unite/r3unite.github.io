@@ -12,6 +12,7 @@ let wonGame = false;
 let lettersToTest = [];
 let usedGoodLetters = [];
 let usedBadLetters = [];
+let difficulty = 2;
 let dict = [
   
   'abajgat' ,
@@ -339,6 +340,7 @@ let dict = [
 
 function setUpDomElements()
 {
+	getText();
 	//DOM object
 	domObj = {
 		startGameBTN: document.getElementById('btn-startGame'),
@@ -484,7 +486,7 @@ function arrayEqual(arr)
 }
 function catchWord(multi)
 {
-	getText();
+	
 	wordHides.length = 0;
 	if (multi && DOM.inputBox.value !== '')
 	{
@@ -607,9 +609,21 @@ function unHideLetters(arr)
 	console.log(wordHides);
 }
 
+function unHideDifficulty()
+{
+	for(i=0;i<difficulty;i++)
+	{
+	
+		wordHides[Math.floor(Math.random()*wordHides.length)] = true;
+	console.log(wordHides);
+	}
+	
+}
+
+
 
 function startGame(){
-	
+	difficulty -= 0.1;
 	usedBadLetters.length = 0;
 	usedGoodLetters.length = 0;
 	
@@ -623,6 +637,7 @@ function startGame(){
 	DOM.winROOM.style.display = 'none';		//hide win room
 	DOM.gameROOM.style.display = 'block';	//show game room
 	catchWord(false);
+	unHideDifficulty();
 	render();
 }
 
