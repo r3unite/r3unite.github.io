@@ -11,26 +11,35 @@ function setupDOM(){
 		
 	cesarEl : document.getElementById('input-cesar'),
 	plainTextEl : document.getElementById('input-plainText'),
-	shiftEl : document.getElementById('input-shift')
+	shiftEl : document.getElementById('input-shift'),
+	updateEl : document.getElementById('input-update')
 	
 	};
+	domObj.updateEl.checked = true;
+	domObj.updateEl.addEventListener("change", function()
+	{importFromDOM();
 	
+		
+	});
 	
 	domObj.cesarEl.addEventListener("change", function()
-	{
-		importFromDOM();
-		decipher();
+	{importFromDOM();
+		if(allowUpdate){
+		
+		decipher();}
 		
 	});
 	domObj.plainTextEl.addEventListener("change", function()
-	{
-		importFromDOM();
-		cipher();
+	{importFromDOM();
+		if(allowUpdate){
+		
+		cipher();}
 	});
 	domObj.shiftEl.addEventListener("change", function()
 	{
-		importFromDOM();
 		
+		importFromDOM();
+		if(allowUpdate){
 		switch(lastOperation)
 		{
 			case 'cipher':
@@ -39,6 +48,7 @@ function setupDOM(){
 			case 'decipher':
 				decipher();
 				break;
+		}
 		}
 	});
 	
@@ -59,9 +69,10 @@ function render(){
 // init variables
 
 let cesar = '';
-let text = 'exampleText'
+let text = 'Komaromi Adrian'
 let shift = 1; 
 let lastOperation = ''
+let allowUpdate = true;
 
 
 // worklflow
@@ -125,6 +136,7 @@ function importFromDOM(){
 	text = DOM.plainTextEl.value;
 	cesar = DOM.cesarEl.value;
 	shift = parseInt(DOM.shiftEl.value);
+	allowUpdate = Boolean(DOM.updateEl.checked);
 }
 
 function outputToDOM(){
