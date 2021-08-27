@@ -75,6 +75,7 @@
     </head>
 
     <body>
+	<button onclick="openFullScreeen()"> FullScreen </button>
         <div class="gm4html5_div_class" id="gm4html5_div_id">
             <!-- Create the canvas element the game draws to -->
             <canvas id="canvas" width="1024" height="576">
@@ -84,5 +85,17 @@
 
         <!-- Run the game code -->
         <script type="text/javascript" src="html5game/wakeuptomorrow.js?IPKAC=4804910"></script>
+		<script>
+		var elem = document.getElementById("gm4html5_div_class");
+		function openFullscreen() {
+		  if (elem.requestFullscreen) {
+			elem.requestFullscreen();
+		  } else if (elem.webkitRequestFullscreen) { /* Safari */
+			elem.webkitRequestFullscreen();
+		  } else if (elem.msRequestFullscreen) { /* IE11 */
+			elem.msRequestFullscreen();
+		  }
+		}
+		</script>
     </body>
 </html>
