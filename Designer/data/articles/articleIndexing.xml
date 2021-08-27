@@ -1,0 +1,24 @@
+
+																!NOTES!
+
+designer has to have a viewing mode (for already published orders)  ?viewing_mode=true;
+
+designer must have the first paramater (?article_id=wooden_putyu)
+
+designer has to have an end preview
+
+designer has to have multiple side options
+
+designer has to have an API for asking the user questions
+
+every article must have precise x1x2y1y2 values for printable rectangular surface (if the object is fully printable it must be within these boundaries)
+
+every article must have a print type parameter
+
+designer controls:
+	
+	zoombar -- right side
+	
+	center print button 
+	
+	

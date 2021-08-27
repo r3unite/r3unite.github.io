@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles.css"></link>
+		<title>Akasztófa</title>
+	
+	
+
+		
+	
+	
+	</head>
+	<body>
+		<div id="room-menu">
+		
+			<div id='menu'>
+				<h1 id="title">Akasztofa</h1></br>
+				<p id='madeby'>Keszitette:</h1></br>
+				<p id='author'>Komaromi Adrian</h1></br>
+				<button id="btn-startGame">Egyszeru jatek!</button> </br>
+				<button id="btn-startMulti">Elore megadott szo</button>		
+			</div>
+		</div>
+			
+		<div id="room-input">
+		
+			<div id='menu'>
+				<h1 id="title">Ird be az ellenfel szavat!</h1></br>
+				<div id="hide-input">
+				<input type="password" id='box-input'></input><button id='btn-toggleSee'></button>
+				
+				</div>
+				<button onclick="startMulti()">mehet</button>
+			</div>
+		</div>			
+			
+		<div id="room-death">
+		
+			<div id='menu'>
+				<h1 id="title">Vesztettel. :(</h1></br>
+				<p id='madeby'>Ujra?</h1></br>
+				<button id="btn-restart" onclick="startGame()">Igen!</button> </br>
+				<button id="btn-menu" onclick="showMenuScreen()">Menu</button>		
+			</div>
+		</div>
+		<div id="room-win">
+		
+			<div id='menu'>
+				<h1 id="title">Nyertel!</h1></br>
+				<p id='madeby'>Ujra?</h1></br>
+				<button id="btn-restart" onclick="startGame()">Igen!</button> </br>
+				<button id="btn-menu" onclick="showMenuScreen()">Menu</button>		
+			</div>
+		</div>
+		<div id="room-game">
+		
+			<div id="board-score">
+				
+				<p>PONTSZÁM</p>
+				<h1 id='points'>0</p>
+			</div>
+			<div id="board-game">
+				<div id="div-letters">
+				
+				
+				</div>
+				<div id="div-usedLetters">A</div>
+				
+				<div id="div-hangman">
+				</div>
+			
+			</div>
+			<div id="board-keyboard">
+				<td>
+				<button id="btn-a">A</button>
+				<button id="btn-b">B</button>
+				<button id="btn-c">C</button>
+				<button id="btn-d">D</button>
+				<button id="btn-e">E</button>
+				<button id="btn-f">F</button>
+				<button id="btn-g">G</button>
+				<button id="btn-h">H</button>
+				<button id="btn-i">I</button>
+				</br>
+				<button id="btn-j">J</button>
+				<button id="btn-k">K</button>
+				<button id="btn-l">L</button>
+				<button id="btn-m">M</button>
+				<button id="btn-n">N</button>
+				<button id="btn-o">O</button>
+				<button id="btn-p">P</button>
+				<button id="btn-q">Q</button>
+				<button id="btn-r">R</button>
+				</br>
+				<button id="btn-s">S</button>
+				<button id="btn-t">T</button>
+				<button id="btn-u">U</button>
+				<button id="btn-v">V</button>
+				<button id="btn-w">W</button>
+				<button id="btn-x">X</button>
+				<button id="btn-y">Y</button>
+				<button id="btn-z">Z</button>		
+				</td>				
+			</div>		
+		
+		</div>		
+		
+		<script src="brains.js"></script>
+	</body>
+</html>

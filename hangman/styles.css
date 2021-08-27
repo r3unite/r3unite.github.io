@@ -1,0 +1,254 @@
+
+@font-face {
+  font-family: mainFont;
+  src: url(thin.woff);
+}
+
+body{
+font-family: mainFont;
+background-color: #eb8934;
+
+text-align: center;
+
+}
+
+
+
+button{
+	padding: 1%;
+	background-color: #cf7900;
+	color: #fff8de;
+	font-size: 4vw;
+	border-radius: 5px;
+
+	border-width: 3px;
+	border-color: #fcd197;
+	border-style: solid;
+	font-family: mainFont;
+	 transition: background-color 0.6s, border-width 0.3s;
+}
+
+#hide-input{
+	position: relative;
+	
+}
+input{
+	width: 75%;
+	padding: 1%;
+	background-color: #fff4cf;
+	color: black;
+	font-size: 4vw;
+	border-radius: 5px;
+
+	border-width: 3px;
+	border-color: #fcd197;
+	border-style: solid;
+	font-family: mainFont;
+	 transition: background-color 0.6s, border-width 0.3s;
+}
+
+
+
+
+
+
+
+button:hover{
+	background-color: #cf7940;
+	border-width: 5px;
+	cursor: pointer;
+}
+
+#room-menu{
+	
+	width: 100%;
+	height: 100%;
+}
+
+#room-menu h1{
+	color: #fff8de;
+	margin: 3%;
+	font-size: 60px;
+	
+}
+#room-menu p{
+	margin: 0px;
+	color: #fff8de;
+	
+}
+
+
+#menu button{
+	margin: 1%;
+	width: 75%;
+	
+}
+
+#room-game{
+	
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: none;
+}
+
+
+#room-game #board-score{
+	
+	background: rgb(255,245,114);
+background: radial-gradient(circle, rgba(255,245,114,1) 0%, rgba(255,164,84,1) 100%);
+	height: 15%;
+	margin-bottom: 0.5%;
+}
+
+#room-game #board-game{
+	
+	background-image: url(wallpaper-notebook.jpg);
+	height: 55%;
+	margin-top: 0.5%;
+	margin-bottom: 0.5%;
+	background-repeat: no-repeat;
+	  background-size: 100% 200%;
+	  overflow: hidden;
+	 position: relative;
+}
+
+#div-hangman{
+	width: 30%;
+	height: 100%;
+	display: inline-block;
+	position: absolute;
+	right: 5%;
+	justify-content: center;
+    align-items: center;
+    overflow: hidden;
+	background-image: url(images/hangman_8.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	
+}
+
+#div-letters{
+	width: 60%;
+	height: 100%;
+	display: inline-block;
+	position: absolute;
+	left: 5%;
+	justify-content: center;
+    align-items: center;
+    overflow: hidden;
+	
+	
+}
+
+[id*=letterX]{
+	font-size: 50px;
+	display: inline-block;
+	justify-content: center;
+    align-items: center;
+	background-image: url(images/letterPlatform.png);
+	background-size: 100% 85%;
+	
+}
+
+
+#room-game #board-keyboard{
+	
+	background-color: #ffa454;
+	height: 28%;
+	margin-top: 0.5%;
+	margin-bottom: 0.5%;
+}
+
+#div-usedLetters{
+	
+position: absolute;
+width: 100%;
+font-size: 30px;
+bottom: 0;
+	
+}
+
+
+
+[id*=usedLetter-]
+{
+	background-image: url(images/crossedLetter.png);
+	display: inline-block;
+	background-size: 100% 100%;
+}
+
+#room-death{
+	
+	display: none;
+}
+#room-death h1{
+	color: #fff8de;
+	margin: 3%;
+	font-size: 60px;
+	
+}
+#room-death p{
+	margin: 0px;
+	color: #fff8de;
+	
+}
+
+#room-win{
+	
+	display: none;
+}
+#room-win h1{
+	color: #fff8de;
+	margin: 3%;
+	font-size: 60px;
+	
+}
+#room-win p{
+	margin: 0px;
+	color: #fff8de;
+	
+}
+
+#room-input{
+	
+	display: none;
+}
+#room-input h1{
+	color: #fff8de;
+	margin: 3%;
+	font-size: 60px;
+	
+}
+#room-input p{
+	margin: 0px;
+	color: #fff8de;
+	
+}
+
+
+#room-game #board-keyboard button{
+	
+width: 10%;
+}
+
+#hide-input button {
+	
+		margin: 0px;
+		padding: 0px;
+        position: absolute;
+        top: 0px;
+        border-radius: 5px;
+        right: 12.5%;
+        z-index: 2;
+        width: 10%;
+        cursor: pointer;
+        color: white;
+        background-color: #1e90ff;
+        transform: translateX(2px);
+		height: 100%;
+		background-image: url(images/eyeIcon.png);
+		background-size: 65% 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+    }
