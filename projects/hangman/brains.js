@@ -494,7 +494,7 @@ function catchWord(multi)
 	}
 	else
 	{
-		word = dict[Math.floor(Math.random() * dict.length)];
+		word = dict[Math.floor(Math.random() * dict.length)].toLowerCase();
 	}
 	
 	
