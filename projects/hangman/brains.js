@@ -12,7 +12,7 @@ let wonGame = false;
 let lettersToTest = [];
 let usedGoodLetters = [];
 let usedBadLetters = [];
-const dict = [
+let dict = [
   
   'abajgat' ,
   'abakusz' ,
