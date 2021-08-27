@@ -680,3 +680,66 @@ function showInputScreen(){
 	DOM.menuROOM.style.display = 'none';	//show win screen
 	DOM.inputROOM.style.display = 'block';
 }
+
+
+function getText(){
+    var request = new XMLHttpRequest();
+	let url = getRoot(window.location.href)+'dict_hun.dic';
+    request.open('GET', url, true);
+	request.setRequestHeader('Access-Control-Allow-Headers', '*');
+    request.setRequestHeader('Access-Control-Allow-Origin', '*');
+    request.send(null);
+	
+    request.onreadystatechange = function () {
+        if (request.readyState === 4 && request.status === 200) {
+            var type = request.getResponseHeader('Content-Type');
+			
+			console.log(request.responseText);
+            return request.responseText;
+				
+				
+            
+        }
+    }
+}
+
+function getRoot(url){
+	let newStr = '';
+	for(i=url.length;i>0;i--)
+	{
+		
+		if(url.charAt(i) !== '/')
+		{
+			
+			newStr = url.slice(0, i)
+		}
+		else
+		{
+			return newStr;
+		}
+	}
+	
+	
+	
+}
+
+/*
+document.getElementById('file').onchange = function(){
+
+  let file = this.files[0];
+
+  let reader = new FileReader();
+  reader.onload = function(progressEvent){
+    // Entire file
+    console.log(this.result);
+
+    // By lines
+    let lines = this.result.split('\n');
+    for(var line = 0; line < lines.length; line++){
+      console.log(lines[line]);
+    }
+  };
+  reader.readAsText(file);
+};
+
+*/
