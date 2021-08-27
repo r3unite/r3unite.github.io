@@ -1,0 +1,161 @@
+@font-face {
+  font-family: 'bebas';
+  src:  url('fonts/bebasneue.woff') format('woff');
+}
+
+
+
+
+body{
+	
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+	margin-top: 50px;
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-iteration-count: once;
+	font-family: 'bebas', Fallback, sans-serif;
+}
+
+h2 {
+	margin-top: 50px;
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-iteration-count: once;
+	font-family: 'bebas', Fallback, sans-serif;
+	font-size: 28px;
+	background-color: #cccccc;
+	margin-left: 30%;
+	margin-right: 30%;	
+	border-radius: 5px;
+	padding: 1%;
+}
+
+.listItem{
+	margin-top: 50px;
+    animation-duration: 6s;
+    animation-name: slidein;
+    animation-iteration-count: once;
+	font-family: 'bebas', Fallback, sans-serif;
+	font-size: 28px;
+	background-color: #224242;
+	margin-left: 30%;
+	margin-right: 50%;	
+	border-radius: 5px;
+	padding: 1%;
+}
+
+
+
+img {
+	margin-top: 50px;
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-iteration-count: once;
+	width: 20%;
+}
+
+#floatNav{
+	
+	position: fixed;
+	margin-left: 10px;
+	background-color: transparent;
+	width: 2.5vw;
+	height: 30%;
+	margin-top: 17.5%;
+
+	border-radius: 33px;
+	
+	
+}
+#floatNav:hover > .selectorButton { background-color: yellow; transition: background-color 2s;}
+#floatNav:hover{
+	background-color: #cccccc;
+	transition: background-color 2s;
+	
+}
+
+
+#floatNav .selectorButton{
+	
+	background-color:#ffffff;
+	width: 8.5px;
+	height: 4%;
+	border-radius: 100px;
+	display: inline-block;
+}
+#floatNav .selectorButton:hover{
+	
+	background-color:#83c433;
+	width: 8.5px;
+	height: 4%;
+	border-radius: 100px;
+	display: inline-block;
+}
+
+[id*="slide-"] 
+  {
+	
+	display: block;
+    height: 100%;
+    width: 100%;
+	overflow-y: auto;
+  }
+
+[id*="slide-"] .flag
+  {
+	display: inline-block;
+	width: 10%;
+	height: 100%;
+	margin-top: 0px;
+	
+	animation-duration: 0s;
+    animation-name: none;
+    animation-iteration-count: once;
+	
+  }
+.slide-title
+{
+	display: none;
+	
+}
+
+@keyframes slidein {
+  0% {
+    margin-top: -50px;
+  }
+  100% {
+    margin-top: 50px;
+  }
+}
+
+
+#floatNav .selectorButton .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+	z-index: 1;
+
+  /* Position the tooltip */
+  position: absolute;
+
+}
+
+#floatNav .selectorButton:hover .tooltiptext {
+  visibility: visible;
+}
