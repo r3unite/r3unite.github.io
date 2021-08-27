@@ -694,7 +694,7 @@ function getText(){
         if (request.readyState === 4 && request.status === 200) {
             var type = request.getResponseHeader('Content-Type');
 			
-			console.log(request.responseText);
+			dict = request.responseText.split("\n");
             return request.responseText;
 				
 				
