@@ -1,7 +1,7 @@
 let currentSlide = 1
 let slideNumber = 0;
 let mainLang;
-
+let sliding = false;
 
 const language = {
 
@@ -54,6 +54,10 @@ function getNumberOfSlidesOnPage()
 	let i = 1;
 	while(document.getElementById("slide-"+i))
 	{
+		if(i !== 1)
+		{
+		document.getElementById("slide-"+i).className='hiddenSlide'
+		}
 		console.log('found:'+i);
 		slideNumber = i;
 		i++;
@@ -75,28 +79,51 @@ function chk_scroll(e)
 
 function nextSlide()
 {
+	sliding = true;
 	hideSlide(currentSlide)
 	currentSlide++
 	showSlide(currentSlide)
+
 }
 
 function hideSlide(s)
 {
 	let slide = document.getElementById("slide-"+s)
-	slide.style.display = "none"
+
+	slide.className = 'slidingUp'
+	slide.addEventListener('transitionend', handleTransition.bind(slide,slide))
+	
+	//
 }
+
+function handleTransition(slide)
+{
+	if(sliding)
+	{
+		slide.className = 'hiddenSlide'
+		slide.removeEventListener("transitionend",handleTransition.bind(slide,slide));
+		sliding = false;
+	}
+}
+
 
 function showSlide(s)
 {
 	let slide = document.getElementById("slide-"+s)
-	slide.style.display = "block"
+	slide.className = 'shownSlide'
+	//slide.style.display = "block"
 	//slide.scrollTop = 0;
 }
 
 function jumpToSlide(s)
 {
+	
 	if (s !== currentSlide)
 	{
+		sliding = true;
+	
+	
+		
 		hideSlide(currentSlide)
 		currentSlide = s
 		showSlide(s)
@@ -104,4 +131,5 @@ function jumpToSlide(s)
 	{
 		alert('niga u alredy on this slide');
 	}
+
 }

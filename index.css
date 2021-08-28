@@ -15,6 +15,7 @@ body{
   height: 100vh;
   width: 100vw;
   margin: 0px;
+  
 }
 
 
@@ -23,6 +24,11 @@ body{
 }
 
 h1 {
+			-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+	
 	margin-top: 50px;
     animation-duration: 2s;
     animation-name: slidein;
@@ -30,9 +36,17 @@ h1 {
 	font-family: 'bebas', Fallback, sans-serif;
 	color: var(--accent);
 	font-size: 44px;
+
 }
 
 h2 {
+			-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+	
+	
+	
 	margin-top: 50px;
     animation-duration: 2s;
     animation-name: slidein;
@@ -47,6 +61,7 @@ h2 {
 	border-color: var(--accent);
 	border-width: 1%;
 	border-style: solid;
+		background-image: url(images/stripe.svg);
 }
 
 .svg-icon{
@@ -56,6 +71,11 @@ h2 {
 	
 }
 .listItem{
+		-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+	
 	margin-top: 50px;
     animation-duration: 6s;
     animation-name: slidein;
@@ -67,9 +87,16 @@ h2 {
 	margin-right: 50%;	
 	border-radius: 5px;
 	padding: 1%;
+	
+	height: 11%;
 }
 
 .listItemFlag{
+		-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+	
 	margin-top: 50px;
     animation-duration: 6s;
     animation-name: slidein;
@@ -84,7 +111,11 @@ h2 {
 	text-shadow: 1px 1px 5px #fffa69;
 	background-size:  100% 100%; 
 	color: #292427;
-	transition: background-size 2s, margin 2s, color 2s, text-shadow 2s;
+		height: 11%;
+		
+		
+		
+	transition: background-size 2s, margin 2s, color 2s, text-shadow 2s, height 2s;
 }
 
 .listItemFlag:hover{
@@ -103,7 +134,20 @@ h2 {
 	background-size: 150% 100%; 
 	background-position: center;
 	background-image: none;
+		height: 20%;
+}
+
+.hidden {
 	
+		opacity: 0;
+	transition: 1s;
+	transition-delay: 1s;
+}
+
+.listItemFlag:hover .hidden {
+  display: block;
+  	opacity: 1;
+
 }
 
 img {
@@ -122,16 +166,18 @@ img {
 	width: 2.5vw;
 	height: 30%;
 	margin-top: 17.5%;
-
+	border: 0px solid;
 	border-radius: 33px;
+	border-color: transparent;
+	transition: border 2s;
 	
 	
 }
 #floatNav:hover > .selectorButton { background-color: var(--accent); transition: background-color 2s;}
 #floatNav:hover{
-	background-color: #cccccc;
-	transition: background-color 2s;
 	
+	border: 2px var(--accent) solid;
+	border-color: ;
 }
 
 
@@ -159,20 +205,27 @@ img {
     height: 100%;
     width: 100%;
 	overflow-y: auto;
+	transition: margin-top 1s;
+	/*background-image: url(images/stripe.svg);*/
+
+	background-color: #292427;
+background: rgb(78,71,75);
+background: radial-gradient(circle, rgba(78,71,75,1) 0%, rgba(41,36,39,1) 100%);
+	
   }
 
-[id*="slide-"] .flag
+
+.slidingUp
   {
-	display: inline-block;
-	width: 10%;
-	height: 100%;
-	margin-top: 0px;
-	
-	animation-duration: 0s;
-    animation-name: none;
-    animation-iteration-count: once;
-	
+	margin-top: -100vh;
+
   }
+  
+.hiddenSlide
+  {
+	display: none;
+  }
+
 .slide-title
 {
 	display: none;
