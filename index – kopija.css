@@ -3,10 +3,7 @@
   src:  url('fonts/bebasneue.woff') format('woff');
 }
 
-:root {
-  --back: #292427;
-  --accent: #fffa69;
-}
+
 
 
 body{
@@ -28,33 +25,22 @@ h1 {
     animation-name: slidein;
     animation-iteration-count: once;
 	font-family: 'bebas', Fallback, sans-serif;
-	color: var(--accent);
-	font-size: 44px;
 }
 
 h2 {
 	margin-top: 50px;
     animation-duration: 2s;
     animation-name: slidein;
+    animation-iteration-count: once;
 	font-family: 'bebas', Fallback, sans-serif;
-	font-size: 34px;
-	background-color: #26171f;
-	color: var(--accent);
+	font-size: 28px;
+	background-color: #cccccc;
 	margin-left: 30%;
 	margin-right: 30%;	
 	border-radius: 5px;
 	padding: 1%;
-	border-color: var(--accent);
-	border-width: 1%;
-	border-style: solid;
 }
 
-.svg-icon{
-	width: 30%;
-	height: 30%;
-	transform: translate(0, 120%);
-	
-}
 .listItem{
 	margin-top: 50px;
     animation-duration: 6s;
@@ -62,49 +48,14 @@ h2 {
     animation-iteration-count: once;
 	font-family: 'bebas', Fallback, sans-serif;
 	font-size: 28px;
-	background-color: #50541d;
+	background-color: #224242;
 	margin-left: 30%;
 	margin-right: 50%;	
 	border-radius: 5px;
 	padding: 1%;
 }
 
-.listItemFlag{
-	margin-top: 50px;
-    animation-duration: 6s;
-    animation-name: slidein;
-    animation-iteration-count: once;
-	font-family: 'bebas', Fallback, sans-serif;
-	font-size: 28px;
-	background-color: #50541d;
-	margin-left: 40%;
-	margin-right: 40%;	
-	border-radius: 5px;
-	padding: 1%;
-	text-shadow: 1px 1px 5px #fffa69;
-	background-size:  100% 100%; 
-	color: #292427;
-	transition: background-size 2s, margin 2s, color 2s, text-shadow 2s;
-}
 
-.listItemFlag:hover{
-	margin-top: 50px;
-    animation-duration: 6s;
-    animation-name: slidein;
-    animation-iteration-count: once;
-	font-family: 'bebas', Fallback, sans-serif;
-	font-size: 28px;
-	background-color: #50541d;
-	margin-left: 32%;
-	margin-right: 32%;	
-	border-radius: 5px;
-	padding: 1%;
-	text-shadow: 1px 1px 5px #000000;
-	background-size: 150% 100%; 
-	background-position: center;
-	background-image: none;
-	
-}
 
 img {
 	margin-top: 50px;
@@ -127,7 +78,7 @@ img {
 	
 	
 }
-#floatNav:hover > .selectorButton { background-color: var(--accent); transition: background-color 2s;}
+#floatNav:hover > .selectorButton { background-color: yellow; transition: background-color 2s;}
 #floatNav:hover{
 	background-color: #cccccc;
 	transition: background-color 2s;
@@ -137,7 +88,7 @@ img {
 
 #floatNav .selectorButton{
 	
-	background-color:var(--accent);
+	background-color:#ffffff;
 	width: 8.5px;
 	height: 4%;
 	border-radius: 100px;

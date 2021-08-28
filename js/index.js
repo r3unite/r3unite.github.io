@@ -1,5 +1,23 @@
 let currentSlide = 1
 let slideNumber = 0;
+let mainLang;
+
+
+const language = {
+
+	welcome : 'Helló!',
+	introduce : 'Komáromi Adrián vagyok'
+
+};
+
+function getParameterByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
 
 $(document).ready(function(){
     
@@ -16,6 +34,10 @@ $(document).ready(function(){
 		let slideTitle = document.getElementById("slide-"+i).getElementsByClassName("slide-title")[0].innerHTML
 		floatNavEl.innerHTML += '<div class="selectorButton" onclick="jumpToSlide('+i+')" style="margin-top: '+height*(margins/100)+'px; margin-bottom: '+height*(margins/100)+'px;"><span class="tooltiptext">'+ slideTitle +'</span></div><br>'
 
+	}
+	let querySlide = getParameterByName('sl')
+	if(querySlide){
+		jumpToSlide(querySlide)
 	}
 	
 	
@@ -46,7 +68,7 @@ function chk_scroll(e)
     if (elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight()) 
     {
         console.log("bottom");
-		nextSlide();
+		//nextSlide();
     }
 
 }
