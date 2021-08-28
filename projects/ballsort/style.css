@@ -1,0 +1,105 @@
+
+
+body{
+
+
+
+}
+#div-main{
+	
+	width: 100%;
+	height: 100%;
+	
+	
+	
+}
+
+#div-options{
+	
+	width: 100%;
+	height: 20%;
+	
+}
+
+
+#div-game{
+	
+	width: 100%;
+	height: 80%;
+	
+}
+
+#div-spaceContainer{
+	text-align: center;
+	width: 100%;
+	height: 20%;
+	display: inline-flex;
+	justify-content: space-around
+}
+
+#div-fContainer{
+	text-align: center;
+	width: 100%;
+	height: 80%;
+	display: inline-flex;
+	justify-content: space-around
+}
+
+[id*=hand] 
+{
+	background-color: #000000;
+	height: 90%;
+	width: 90%;
+	border-radius: 100%;
+	border-color: #000000;
+	border: solid;
+	
+}
+
+
+[id*=hand].empty
+{
+	background-color: transparent;
+	border: none;
+}
+
+
+[id*=slot] 
+{
+	background-color: #000000;
+
+
+	height: 15%;
+	width: 100%;
+	border-radius: 100%;
+	border-color: #000000;
+	border: solid;
+	
+}
+
+
+[id*=slot].empty
+{
+	display: none;
+}
+
+
+[id*=flask]
+{
+	text-align: center;
+	border-color: #404404;
+	border-width: 2px;
+	border: solid;
+	display: inline-block;
+	width: 6%;
+	height: 100%;
+	
+	
+    display: inline-flex;
+    align-items: bottom;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-end;
+	flex-wrap: wrap;
+}
