@@ -69,12 +69,16 @@ function getNumberOfSlidesOnPage()
 
 function chk_scroll(e)
 {
-    var elem = $(e.currentTarget);
-    if (elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight()) 
-    {
-        console.log("bottom");
-		nextSlide();
-    }
+	if (sliding === false)
+		
+	{
+		var elem = $(e.currentTarget);
+		if (elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight()) 
+		{
+			alert("bottom");
+			nextSlide();
+		}
+	}
 
 }
 
