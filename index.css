@@ -56,7 +56,7 @@ h2 {
 	user-select: none; /* Standard */
 	
 	
-	
+	margin: auto;
 	margin-top: 50px;
     animation-duration: 2s;
     animation-name: slidein;
@@ -64,8 +64,8 @@ h2 {
 	font-size: 34px;
 	background-color: #26171f;
 	color: var(--accent);
-	margin-left: 30%;
-	margin-right: 30%;	
+	min-width: 20%;
+	max-width: fit-content;
 	border-radius: 5px;
 	padding: 1%;
 	border-color: var(--accent);
@@ -114,18 +114,17 @@ h2 {
 	font-family: 'bebas', Fallback, sans-serif;
 	font-size: 28px;
 	background-color: #50541d;
-	margin-left: 40%;
-	margin-right: 40%;	
+
 	border-radius: 5px;
-	padding: 1%;
+	padding: 0.1%;
 	text-shadow: 1px 1px 5px #fffa69;
 	background-size:  100% 100%; 
 	color: #292427;
-		height: 11%;
+		min-height: 11%;
+		min-width: 21%;	
+		max-height: fit-content;
 		
-		
-		
-	transition: background-size 2s, margin 2s, color 2s, text-shadow 2s, height 2s;
+	transition: background-size 2s, margin 2s, color 2s, text-shadow 2s, min-height 2s, padding 2s, font-size 2s;
 }
 
 .listItemFlag:hover{
@@ -136,22 +135,23 @@ h2 {
 	font-family: 'bebas', Fallback, sans-serif;
 	font-size: 28px;
 	background-color: #50541d;
-	margin-left: 32%;
-	margin-right: 32%;	
+
 	border-radius: 5px;
 	padding: 1%;
-	text-shadow: 1px 1px 5px #000000;
+	text-shadow: 1px 1px 5px #ffffff;
 	background-size: 150% 100%; 
 	background-position: center;
 	background-image: none;
-		height: 20%;
+		min-height: fit-content;
+
+    font-size: 35px;
 }
 
 .hidden {
-	
+	  display: none;
 		opacity: 0;
 	transition: 1s;
-	transition-delay: 1s;
+
 }
 
 .listItemFlag:hover .hidden {
@@ -213,7 +213,7 @@ img {
 
 [id*="slide-"] 
   {
-	
+	text-align: center;
 	display: block;
     height: 100%;
     width: 100%;

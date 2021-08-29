@@ -75,8 +75,11 @@ function chk_scroll(e)
 		var elem = $(e.currentTarget);
 		if (elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight()) 
 		{
-			alert("bottom");
-			nextSlide();
+			//
+			if (isThereANextSlide())
+			{
+				nextSlide();
+			}
 		}
 	}
 
@@ -90,6 +93,21 @@ function nextSlide()
 	showSlide(currentSlide)
 
 }
+
+function isThereANextSlide()
+{
+	if(currentSlide < slideNumber)
+	{
+		alert(currentSlide + ' out of ' +  slideNumber)
+		return true;
+	}
+	else
+	{
+		return false;
+		alert('ran out of slides to show!' + currentSlide + ' out of ' +  slideNumber)
+	}
+}
+
 
 function hideSlide(s)
 {
