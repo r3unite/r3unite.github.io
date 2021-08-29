@@ -32,7 +32,8 @@ $(document).ready(function(){
 		let margins = ((100 - (4*slideNumber)) / slideNumber) / 2
 		let floatNavEl = document.getElementById('floatNav')
 		let slideTitle = document.getElementById("slide-"+i).getElementsByClassName("slide-title")[0].innerHTML
-		floatNavEl.innerHTML += '<div class="selectorButton" onclick="jumpToSlide('+i+')" style="margin-top: '+height*(margins/100)+'px; margin-bottom: '+height*(margins/100)+'px;"><span class="tooltiptext">'+ slideTitle +'</span></div><br>'
+		//floatNavEl.innerHTML += '<div class="selectorButton" onclick="jumpToSlide('+i+')" style="margin-top: '+height*(margins/100)+'px; margin-bottom: '+height*(margins/100)+'px;"><span class="tooltiptext">'+ slideTitle +'</span></div><br>'
+		floatNavEl.innerHTML += '<div class="selectorButton" onclick="jumpToSlide('+i+')"><span class="tooltiptext">'+ slideTitle +'</span></div>'
 
 	}
 	let querySlide = getParameterByName('sl')
@@ -72,7 +73,7 @@ function chk_scroll(e)
     if (elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight()) 
     {
         console.log("bottom");
-		//nextSlide();
+		nextSlide();
     }
 
 }

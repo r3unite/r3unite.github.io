@@ -23,6 +23,16 @@ body{
   box-sizing: border-box;
 }
 
+#floatWrapper
+{
+	    justify-content: center;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    width: 10%;
+    flex-direction: column;
+}
+
 h1 {
 			-webkit-user-select: none; /* Safari */        
 	-moz-user-select: none; /* Firefox */
@@ -161,17 +171,20 @@ img {
 #floatNav{
 	
 	position: fixed;
+	display: flex;
 	margin-left: 10px;
 	background-color: transparent;
 	width: 2.5vw;
 	height: 30%;
-	margin-top: 17.5%;
+	margin-top: auto;
 	border: 0px solid;
 	border-radius: 33px;
 	border-color: transparent;
 	transition: border 2s;
 	
-	
+	    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
 }
 #floatNav:hover > .selectorButton { background-color: var(--accent); transition: background-color 2s;}
 #floatNav:hover{
@@ -187,7 +200,7 @@ img {
 	width: 8.5px;
 	height: 4%;
 	border-radius: 100px;
-	display: inline-block;
+	display: block;
 }
 #floatNav .selectorButton:hover{
 	
@@ -255,6 +268,7 @@ background: radial-gradient(circle, rgba(78,71,75,1) 0%, rgba(41,36,39,1) 100%);
 
   /* Position the tooltip */
   position: absolute;
+  transform: translate(0,-50%);
 
 }
 
