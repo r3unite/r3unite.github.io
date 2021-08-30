@@ -299,7 +299,7 @@ img {
 }
 #floatNav:hover > .selectorButton { background-color: var(--accent); transition: background-color 2s;}
 #floatNav:hover{
-	height: 75%;
+	height: 45%;
 	border: 2px var(--accent) solid;
 	border-color: ;
 }
