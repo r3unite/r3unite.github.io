@@ -211,7 +211,7 @@ function jumpToSlide(s)
 		setHistory();
 	}else
 	{
-		
+		//alert('')
 	}
 
 }
