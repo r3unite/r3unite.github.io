@@ -59,7 +59,7 @@ function getNumberOfSlidesOnPage()
 		{
 		document.getElementById("slide-"+i).className='hiddenSlide'
 		}
-		console.log('found:'+i);
+
 		slideNumber = i;
 		i++;
 	}
@@ -75,10 +75,20 @@ function chk_scroll(e)
 		var elem = $(e.currentTarget);
 		if (elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight()) 
 		{
-			//
+			console.log(elem)
+			elem.scrollTop;
 			if (isThereANextSlide())
 			{
 				nextSlide();
+			}
+		}
+		else if (elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight() == 0) 
+		{
+		
+			if (isThereAPreviousSlide())
+			{
+				//previousSlide();
+				//previousSlide();
 			}
 		}
 	}
@@ -87,10 +97,39 @@ function chk_scroll(e)
 
 function nextSlide()
 {
+	
 	sliding = true;
 	hideSlide(currentSlide)
 	currentSlide++
 	showSlide(currentSlide)
+	setHistory();
+}
+
+function toggleHidden(element)
+{
+	console.log('called' + element)
+	if(document.getElementById(element).className == 'hidden')
+	{
+		document.getElementById(element).className = 'shown';
+		
+		// EXCEPTION! university
+		
+		if(element === 'spoildiv-university-school')
+		{
+			setTimeout(function(){
+				document.getElementById('university-loadSpinner').style.display = 'none';
+				document.getElementById('university-easter-egg').style.display = 'block';
+				
+				}, 3000);
+			
+		}
+		
+		
+	}else
+	{
+		document.getElementById(element).className = 'hidden';
+	}
+	
 
 }
 
@@ -98,7 +137,7 @@ function isThereANextSlide()
 {
 	if(currentSlide < slideNumber)
 	{
-		alert(currentSlide + ' out of ' +  slideNumber)
+		//alert(currentSlide + ' out of ' +  slideNumber)
 		return true;
 	}
 	else
@@ -108,6 +147,25 @@ function isThereANextSlide()
 	}
 }
 
+function isThereAPreviousSlide()
+{
+	if(currentSlide > 0)
+	{
+		//alert(currentSlide + ' out of ' +  slideNumber)
+		return true;
+	}
+	else
+	{
+		return false;
+		alert('ran out of slides to show!' + currentSlide + ' out of ' +  slideNumber)
+	}
+}
+ function setHistory(){
+
+	 const url = new URL(window.location);
+	url.searchParams.set('sl', currentSlide);
+	 window.history.pushState({}, '', url);
+ }
 
 function hideSlide(s)
 {
@@ -150,9 +208,10 @@ function jumpToSlide(s)
 		hideSlide(currentSlide)
 		currentSlide = s
 		showSlide(s)
+		setHistory();
 	}else
 	{
-		alert('niga u alredy on this slide');
+		
 	}
 
 }

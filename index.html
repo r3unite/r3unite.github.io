@@ -45,7 +45,7 @@
 			
 		<span class="slide-title">Bemutatkozás</span>
 		<h1 id="greet-el">Helló!</h1>
-		<img src="images/profil.png"></img><br>
+		<img src="images/profil.png" class="hoverable-image"></img><br>
 		<h2 id="introduction-el">
 			Komáromi Adrián vagyok
 		</br>
@@ -76,7 +76,7 @@
 	  <div style='height: 40%'>
 		</div>
 	  </div>
-	<div id="slide-3" style="background-color: blue; ">
+	<div id="slide-3" >
 	  
 			<span class="slide-title">Szoftver</span>	  
 		<h2 id="introduction-el">Programok haszálata</h2>
@@ -119,7 +119,7 @@
 	  		
 		</div>
 	</div>
-	<div id="slide-4" style="background-color: blue;">
+	<div id="slide-4">
 		
 		<span class="slide-title">Programnyelvek</span>	
 		<h2 id="introduction-el">Programozok...</h1>
@@ -133,7 +133,7 @@
 		<div class="imageListContainer">
 			<h2 class="listItem"><img class="noBg" src="images/svg-icons/js.png"></img></br>Javascript-ben</h2>	  
 		</div>
-		<h1 id="greet-el">Backend és Alkalmazások:</br><img src="images/svg-icons/server.png"></img></h1>
+		<h1 id="greet-el">Backend és Alkalmazásokra:</br><img src="images/svg-icons/server.png"></img></h1>
 		<div class="imageListContainer">
 			<h2 class="listItem"><img class="noBg" src="images/svg-icons/python.png"></img></br>Python-ban</h2>
 		</div>
@@ -147,13 +147,48 @@
 			<h2 class="listItem"><img class="noBg" src="images/svg-icons/csharp.png"></img></br>C#-ban</h2>	  
 		</div>
 		<div class="imageListContainer">
+			<h2 class="listItem"><img class="noBg" src="images/svg-icons/php.png"></img></br>PHP</h2>	  
+		</div>
+		<div class="imageListContainer">
 			<h2 class="listItem"><img class="noBg" src="images/svg-icons/gml.png"></img></br>GML-ben</h2>	  
 		</div>
 		   <div style='height: 40%'>
 			</div>
+			
+
 	</div>
 
-	  
+	  			<div id="slide-5">
+			<span class="slide-title">Tanulmányaim</span>
+			<h2 id="introduction-el">Befejeztem az...</h2>
+			<img src="images/svg-icons/graduation.png"></img></h1>
+				
+				<h2 id="greet-el" onclick="toggleHidden('spoildiv-elementary-school')" class='listItem spoiler '>Általános Iskolát</br></h2>
+				<div id='spoildiv-elementary-school' class="hidden"> 
+				<h2 href=''>Žarko Zrenjanin Általános Iskola</h2></br>
+				<img src='images/elementary.jpg' class='hoverable-image'></img>
+				<h1>Székelykeve</h1></br>
+				</div>
+				<div id='spoildiv-elementary-school' class="hidden"> 
+				Angela egy maci
+				</div>
+				<h2 id="greet-el" class='listItem'>Középiskolát</br></h2>
+				<h2 id="greet-el" onclick="toggleHidden('spoildiv-university-school')" class='listItem spoiler '>Főiskolát</br></h2>	
+				<div id='spoildiv-university-school' class="hidden"> 				
+					<div id='university-loadSpinner' class="loadSpinner">
+					  <div class="bounce1"></div>
+					  <div class="bounce2"></div>
+					  <div class="bounce3"></div>
+					</div>
+					<div id='university-easter-egg' style='display: none;'>
+					<h1>404</h1></br>
+					<h1>Sajnos nem találtunk főiskolát</h1>
+					</div>
+				</div>
+						   
+						   <div style='height: 40%'>
+			</div>
+			</div>
 	  <script src="js/index.js"></script>
 	</body>
 </html>
