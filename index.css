@@ -19,6 +19,8 @@ body{
 }
 
 
+
+
 * {
   box-sizing: border-box;
 }
@@ -46,6 +48,50 @@ h1 {
 	font-family: 'bebas', Fallback, sans-serif;
 	color: var(--accent);
 	font-size: 44px;
+
+}
+
+a {
+			-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+	
+	
+	margin: auto;
+	margin-top: 50px;
+    animation-duration: 2s;
+    animation-name: slidein;
+	font-family: 'bebas', Fallback, sans-serif;
+	font-size: 34px;
+	background-color: #26171f;
+	color: var(--accent);
+	min-width: 20%;
+	max-width: fit-content;
+	border-radius: 45px;
+	padding: 1%;
+	border-color: var(--accent);
+	border-width: 1%;
+	border-style: solid;
+		background-image: url(images/stripe.svg);
+	overflow: hidden;
+}
+
+a .ico{
+	
+    width: 10%;
+    display: inline-block;
+
+}
+
+a svg{
+
+	display: inline-block;
+	margin: auto;
+	width: 10vw;
+		height: 10vw;
+	
+	background-image: url(images/svg-icons/arrow.svg);
 
 }
 
@@ -93,12 +139,35 @@ h2 {
 	font-family: 'bebas', Fallback, sans-serif;
 	font-size: 28px;
 	background-color: #50541d;
-	margin-left: 30%;
-	margin-right: 50%;	
 	border-radius: 5px;
 	padding: 1%;
 	
-	height: 11%;
+	
+		color: #292427;
+		min-height: fit-content;
+		min-width: 15%;	
+		max-width: 20%;	
+		max-height: fit-content;
+		
+	transition: background-size 2s, margin 2s, color 2s, text-shadow 2s, min-height 2s, padding 2s, font-size 2s;
+	
+}
+
+.listItem img{
+	margin: 0;
+	width: 56%;
+	background-color: rgb(2,2,2,0.45);
+	margin-top: -80%;
+	}
+.listItem .noBg{
+	margin: 0;
+	width: 56%;
+background-color: rgb(2,2,2,0);
+	margin-top: -80%;
+	}
+.imageListContainer{
+	
+	margin-top: 10%;
 }
 
 .listItemFlag{
@@ -120,7 +189,7 @@ h2 {
 	text-shadow: 1px 1px 5px #fffa69;
 	background-size:  100% 100%; 
 	color: #292427;
-		min-height: 11%;
+		min-height: fit-content;
 		min-width: 21%;	
 		max-height: fit-content;
 		
